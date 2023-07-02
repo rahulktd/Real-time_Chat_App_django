@@ -27,6 +27,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+LOGOUT_REDIRECT_URL = '/'
+LOGIN_REDIRECT_URL = '/chat_room'
+LOGIN_URL = '/login'
 
 # Application definition
 
@@ -38,7 +41,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'main_app',
-    'channels'
+    'channels',
+    'chat_room'
 ]
 
 MIDDLEWARE = [
