@@ -34,14 +34,15 @@ LOGIN_URL = '/login'
 # Application definition
 
 INSTALLED_APPS = [
+    'daphne',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'main_app',
     'channels',
+    'main_app',
     'chat_room'
 ]
 
@@ -75,6 +76,9 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'chat_application.wsgi.application'
 ASGI_APPLICATION = 'chat_application.asgi.application'
+
+
+
 
 CHANNEL_LAYERS = {
     'default': {
@@ -128,7 +132,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
